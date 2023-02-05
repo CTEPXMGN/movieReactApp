@@ -1,0 +1,49 @@
+.movie-card {
+    display: flex;
+    width: 350px;
+    height: 236px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #d5d5d5;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 6px 8px 12px 3px #919191;
+}
+
+.card-info {
+    width: 193px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-info__head {
+    margin: 15px 15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie-favorite {
+    width: 18px;
+    cursor: pointer;
+}
+
+.movie-bookmark {
+    width: 18px;
+    cursor: pointer;
+}
+
+.movie-name {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 600;
+}
+.movie__button-details {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-top: 1px solid #d5d5d5;
+}
+.movie__button-details:hover {
+    cursor: pointer;
+}

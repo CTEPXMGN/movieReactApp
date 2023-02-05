@@ -1,0 +1,54 @@
+.filter-board {
+    width: 310px;
+    height: 750px;
+    margin-top: 20px;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+    box-shadow: 6px 8px 12px 3px #919191;
+}
+
+.filter-board__title {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.filter-board__clear-button {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 80%;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(35, 37, 54);
+    color: white;
+    cursor: pointer;
+}
+
+.filter-board__clear-button:hover {
+    background-color: rgb(61, 64, 92);
+}
+
+.filter-board__sort-title {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.filter-board__sort-list {
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 30px;
+    width: 80%;
+}
+
+.filter-board__year-title {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.filter-board__year-list {
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 30px;
+    width: 80%;
+}
