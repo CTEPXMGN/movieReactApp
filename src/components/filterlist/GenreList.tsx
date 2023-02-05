@@ -1,19 +1,19 @@
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 import './GenreList.css';
 
-function id() {
-    return nanoid();
-}
+// function id() {
+//     return nanoid();
+// }
 
-import { genres } from './variables.js';
+import { GENRES } from '../variables.js';
 
 function GenreList() {
-    const listItems = genres.map((item) => {
+    const listItems = GENRES.map((item) => {
         return (
-            <li key={id()}>
+            <li key={item.id}>
                 <label>
                     <input type="checkbox" />
-                    {item}
+                    {item.name}
                 </label>
             </li>
         );

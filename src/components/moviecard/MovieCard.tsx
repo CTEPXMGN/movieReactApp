@@ -1,60 +1,42 @@
 import './MovieCard.css';
-
-const moviesData = [
-    {
-        name: 'Истребитель демонов: Поезд "Бесконечный"',
-        rating: '8.4',
-        imgsrc: '../../../public/img/1.png',
-    },
-    {
-        name: 'Леди Баг и Супер-Кот: Нью-Йорк. Союз героев',
-        rating: '8.2',
-        imgsrc: '../../../public/img/2.png',
-    },
-    {
-        name: 'Детстроук: Рыцари и Драконы',
-        rating: '6.9',
-        imgsrc: '../../../public/img/3.png',
-    },
-    {
-        name: 'Соник в кино',
-        rating: '7.4',
-        imgsrc: '../../../public/img/4.png',
-    },
-    {
-        name: 'Семейка Крудс: Новоселье',
-        rating: '7.6',
-        imgsrc: '../../../public/img/5.png',
-    },
-    {
-        name: 'Губка Боб в бегах',
-        rating: '7.6',
-        imgsrc: '../../../public/img/6.png',
-    },
-];
+import {
+    MOVIES_DATA,
+    PAGES_INDEX,
+    IMG_FAVORITE,
+    IMG_BOOKMARK,
+} from '../variables.js';
 
 function MovieCard() {
+    const moviesData = MOVIES_DATA.slice(
+        PAGES_INDEX.firstIndex,
+        PAGES_INDEX.lastIndex
+    );
+
     const movieCards = moviesData.map((item, index) => {
         return (
             <div className="movie-card" key={index}>
-                <img src={item.imgsrc} alt="card-img" className="card-img" />
+                <img
+                    src={item.poster_path}
+                    alt="card-img"
+                    className="card-img"
+                />
                 <div className="card-info">
                     <div className="card-info__head">
                         <p className="card-info__rating">
-                            Рейтинг: <span>{item.rating}</span>
+                            Рейтинг: <span>{item.vote_average}</span>
                         </p>
                         <img
-                            src="../../../public/img/star.svg"
+                            src={IMG_FAVORITE}
                             alt="movie-star"
                             className="movie-favorite"
                         />
                         <img
-                            src="../../../public/img/bookmark.svg"
+                            src={IMG_BOOKMARK}
                             alt="movie-bookmark"
                             className="movie-bookmark"
                         />
                     </div>
-                    <div className="movie-name">{item.name}</div>
+                    <div className="movie-name">{item.title}</div>
                     <div className="movie__button-details">Подробнее</div>
                 </div>
             </div>
